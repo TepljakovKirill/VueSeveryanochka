@@ -4,7 +4,7 @@
 
     <a href="#" class="header_button flex">
       <img src="/burger.svg" alt="Бургер" />
-      <p href="#">Каталог</p>
+      <a href="#">Каталог</a>
     </a>
 
     <input class="header_input" type="search" placeholder="Найти товар" />

@@ -1,6 +1,6 @@
-import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import js from '@eslint/js';
+import pluginVue from 'eslint-plugin-vue';
+import skipFormatting from '@vue/eslint-config-prettier/skip-formatting';
 
 export default [
   {
@@ -13,7 +13,18 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
+  {
+    ...js.configs.recommended,
+  },
+
+  {
+    ...pluginVue.configs['flat/essential'],
+    rules: {
+      ...pluginVue.configs['flat/essential'].rules,
+      'vue/multi-word-component-names': 'off',
+    },
+  },
+
   skipFormatting,
-]
+];
+
