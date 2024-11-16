@@ -1,36 +1,44 @@
 <template>
-  <div class="header_wrap container flex">
-    <img src="/logo.svg" alt="Логотип" />
+  <div class="header">
+    <div class="container">
+      <div class="header_wrap flex">
+        <img src="/logo.svg" alt="Логотип" />
 
-    <a href="#" class="header_button flex">
-      <img src="/burger.svg" alt="Бургер" />
-      <a href="#">Каталог</a>
-    </a>
+        <a href="#" class="header_button flex">
+          <img src="/burger.svg" alt="Бургер" />
+          <p>Каталог</p>
+        </a>
 
-    <input class="header_input" type="search" placeholder="Найти товар" />
-    <div class="header_nav flex">
-      <div class="header_nav-icon flex">
-        <img src="/favrites.svg" alt="Избранное" />
-        <p>Избранное</p>
-      </div>
-      <div class="header_nav-icon flex">
-        <img src="/orders.svg" alt="Заказы" />
-        <p>Заказы</p>
-      </div>
-      <div class="header_nav-icon flex">
-        <img src="/cart.svg" alt="Корзина" />
-        <p>Корзина</p>
+        <input class="header_input" type="search" placeholder="Найти товар" />
+        <div class="header_nav flex">
+          <div class="header_nav-icon flex">
+            <img src="/favrites.svg" alt="Избранное" />
+            <p>Избранное</p>
+          </div>
+          <div class="header_nav-icon flex">
+            <img src="/orders.svg" alt="Заказы" />
+            <p>Заказы</p>
+          </div>
+          <div class="header_nav-icon flex">
+            <img src="/cart.svg" alt="Корзина" />
+            <p>Корзина</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.header {
+  width: 100%;
+  background-color: white;
+}
+
 .header_wrap {
   height: 72px;
-  align-items: center;
   justify-content: space-between;
-  background-color: white;
+  align-items: center;
 }
 
 .header_button {

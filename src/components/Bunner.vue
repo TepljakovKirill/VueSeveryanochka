@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .bunner {
   margin-top: 3px;
   justify-content: center;

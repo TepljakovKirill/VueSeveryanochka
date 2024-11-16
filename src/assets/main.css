@@ -13,15 +13,22 @@ html {
 body {
   font-family: 'Rubik';
   font-size: 16px;
+  color: rgb(65, 65, 65);
   padding: 0;
   margin: 0;
   background-color: rgb(251, 248, 236);
 }
 
 h1,
+h2,
 p {
   padding: 0;
   margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 img {
@@ -35,9 +42,9 @@ a {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1228px;
   margin: 0 auto;
-  padding: 0 116px;
+  padding: 0 10px;
 }
 
 .flex {
@@ -48,10 +55,26 @@ a {
   display: grid;
 }
 
-.list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.section_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section_title-link {
+  padding-right: 50px;
+
+  background-image: url(./allLinkButton.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+
+  color: rgb(65, 65, 65);
+  transition: 0.3s ease-in;
+}
+
+.section_title-link:hover {
+  color: rgb(24, 23, 23);
+  transition: 0.3s ease-in;
 }
 
 @media (min-width: 1024px) {

@@ -1,6 +1,7 @@
 <script setup>
 import Header from './components/Header.vue'
 import Bunner from './components/Bunner.vue'
+import Promotions from './components/Promotions.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Bunner from './components/Bunner.vue'
   </header>
   <main>
     <Bunner />
+    <Promotions />
   </main>
 </template>
 
