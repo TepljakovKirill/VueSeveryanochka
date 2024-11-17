@@ -6,6 +6,7 @@ defineProps({
   title: String,
   priceDiscount: String,
   priceRegular: String,
+  stars: Number,
 })
 
 const isLiked = ref(false)
@@ -37,11 +38,19 @@ const onClickFavorite = () => {
         </div>
       </div>
       <p class="card_title">{{ title }}</p>
-      <div class="card_star-block">
-        <img src="/star.svg" alt="Звезда" />
-        <img src="/star.svg" alt="Звезда" />
-        <img src="/star.svg" alt="Звезда" />
+      <div class="card_star-wrap">
+        <div class="card_star-block">
+          <span v-for="star in 5" :key="star">
+            <img src="/star.svg" alt="Звезда" />
+          </span>
+          <div class="card_star-block">
+            <span v-for="star in stars" :key="star">
+              <img src="/star-red.svg" alt="Звезда" />
+            </span>
+          </div>
+        </div>
       </div>
+
       <button class="card-button">В корзину</button>
     </div>
   </div>
@@ -148,7 +157,16 @@ const onClickFavorite = () => {
   transition: 0.3s ease-in;
 }
 
+.card_star-wrap {
+  position: relative;
+  padding: 10px 0;
+}
+
 .card_star-block {
-  margin-bottom: 8px;
+  display: inline-flex;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>

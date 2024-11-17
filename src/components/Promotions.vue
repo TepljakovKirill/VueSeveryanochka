@@ -19,6 +19,7 @@ defineProps({
         :title="item.title"
         :priceDiscount="item.priceDiscount"
         :priceRegular="item.priceRegular"
+        :stars="item.stars"
       />
     </div>
   </div>
