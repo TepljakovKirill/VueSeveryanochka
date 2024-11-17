@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "type": "Promotion",
+    "imageUrl": "/Products/Product-1.jpeg",
+    "title": "Г/Ц Блинчики с мясом вес, Россия",
+    "priceDiscount": "44,50",
+    "priceRegular": "50,50"
+  },
+
+  {
+    "id": 2,
+    "type": "Promotion",
+    "imageUrl": "/Products/Product-2.jpeg",
+    "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+    "priceDiscount": "44,50",
+    "priceRegular": "50,50"
+  },
+
+  {
+    "id": 3,
+    "type": "Promotion",
+    "imageUrl": "/Products/Product-3.jpeg",
+    "title": "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+    "priceDiscount": "40,50",
+    "priceRegular": "50,10"
+  },
+
+  {
+    "id": 4,
+    "type": "Promotion",
+    "imageUrl": "/Products/Product-4.jpeg",
+    "title": "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
+    "priceDiscount": "44,50",
+    "priceRegular": "42,60"
+  }
+]

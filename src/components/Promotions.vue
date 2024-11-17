@@ -1,5 +1,9 @@
 <script setup>
 import Card from './Card.vue'
+
+defineProps({
+  items: Array,
+})
 </script>
 <template>
   <div class="container">
@@ -8,10 +12,14 @@ import Card from './Card.vue'
       <a class="section_title-link" href="#">Все акции</a>
     </div>
     <div class="section_block flex">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card
+        v-for="item in items"
+        :key="item.id"
+        :imageUrl="item.imageUrl"
+        :title="item.title"
+        :priceDiscount="item.priceDiscount"
+        :priceRegular="item.priceRegular"
+      />
     </div>
   </div>
 </template>

@@ -1,6 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
+defineProps({
+  imageUrl: String,
+  title: String,
+  priceDiscount: String,
+  priceRegular: String,
+})
+
 const isLiked = ref(false)
 const onClickFavorite = () => {
   isLiked.value = !isLiked.value
@@ -10,7 +17,7 @@ const onClickFavorite = () => {
 <template>
   <div class="card">
     <div class="card_img-block">
-      <img class="card_img" src="/Product-1.jpeg" alt="Товар" />
+      <img class="card_img" :src="imageUrl" alt="Товар" />
       <div @click="onClickFavorite" class="card_img-favorite flex">
         <img :src="isLiked ? '/favoriteOn.svg' : '/favorite.svg'" alt="Избранное" />
       </div>
@@ -20,16 +27,16 @@ const onClickFavorite = () => {
     <div class="card_content">
       <div class="card_price flex">
         <div class="card_price-block">
-          <p class="card_price-discount">44,50 ₽</p>
+          <p class="card_price-discount">{{ priceDiscount }} ₽</p>
           <p class="card_price-card">С картой</p>
         </div>
 
         <div class="card_price-block">
-          <p class="card_price-regular">50,50 ₽</p>
+          <p class="card_price-regular">{{ priceRegular }} ₽</p>
           <p class="card_price-card">Обычная</p>
         </div>
       </div>
-      <p class="card_title">Г/Ц Блинчики с мясом вес, Россия</p>
+      <p class="card_title">{{ title }}</p>
       <div class="card_star-block">
         <img src="/star.svg" alt="Звезда" />
         <img src="/star.svg" alt="Звезда" />
