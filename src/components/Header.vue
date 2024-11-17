@@ -2,8 +2,9 @@
   <div class="header">
     <div class="container">
       <div class="header_wrap flex">
-        <img src="/logo.svg" alt="Логотип" />
-
+        <RouterLink to="/">
+          <img src="/logo.svg" alt="Логотип" />
+        </RouterLink>
         <a href="#" class="header_button flex">
           <img src="/burger.svg" alt="Бургер" />
           <p>Каталог</p>
@@ -16,20 +17,23 @@
           </button>
         </div>
 
-        <div class="header_nav flex">
-          <a href="#" class="header_nav-icon flex">
-            <img src="/favrites.svg" alt="Избранное" />
+        <ul class="header_nav flex">
+          <li class="header_nav-icon flex">
+            <RouterLink to="favorites">
+              <img src="/favrites.svg" alt="Избранное" />
+            </RouterLink>
             <p>Избранное</p>
-          </a>
-          <a href="#" class="header_nav-icon flex">
+          </li>
+
+          <li class="header_nav-icon flex">
             <img src="/orders.svg" alt="Заказы" />
             <p>Заказы</p>
-          </a>
-          <a href="#" class="header_nav-icon flex">
+          </li>
+          <li class="header_nav-icon flex">
             <img src="/cart.svg" alt="Корзина" />
             <p>Корзина</p>
-          </a>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -104,6 +108,14 @@
   outline: none;
 }
 
+.header_nav {
+  list-style: none;
+}
+
+.header_nav li:not(:last-child) {
+  margin-right: 24px;
+}
+
 .header_nav-icon {
   height: 50px;
   font-size: 12px;
@@ -111,9 +123,5 @@
   justify-content: space-between;
   align-items: center;
   color: rgb(65, 65, 65);
-}
-
-.header_nav-icon:not(:last-child) {
-  margin-right: 24px;
 }
 </style>

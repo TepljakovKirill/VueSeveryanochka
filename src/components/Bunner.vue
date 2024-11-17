@@ -6,7 +6,7 @@
 
 <style scoped>
 .bunner {
-  margin-top: 3px;
+  margin-top: 2px;
   justify-content: center;
   align-items: center;
   width: 100%;
