@@ -9,20 +9,26 @@
           <p>Каталог</p>
         </a>
 
-        <input class="header_input" type="search" placeholder="Найти товар" />
+        <div class="header_input-group">
+          <input class="header_input" type="search" placeholder="Найти товар" />
+          <button class="header_input__btn" type="button">
+            <img src="/search.svg" alt="Поиск" />
+          </button>
+        </div>
+
         <div class="header_nav flex">
-          <div class="header_nav-icon flex">
+          <a href="#" class="header_nav-icon flex">
             <img src="/favrites.svg" alt="Избранное" />
             <p>Избранное</p>
-          </div>
-          <div class="header_nav-icon flex">
+          </a>
+          <a href="#" class="header_nav-icon flex">
             <img src="/orders.svg" alt="Заказы" />
             <p>Заказы</p>
-          </div>
-          <div class="header_nav-icon flex">
+          </a>
+          <a href="#" class="header_nav-icon flex">
             <img src="/cart.svg" alt="Корзина" />
             <p>Корзина</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -67,15 +73,14 @@
   margin-right: 22px;
 }
 
+.header_input-group {
+  position: relative;
+}
+
 .header_input {
   width: 375px;
   height: 40px;
   font-family: inherit;
-
-  background-image: url(./search.svg);
-  background-position: calc(100% - 6px) center;
-  background-repeat: no-repeat;
-
   position: relative;
   padding: 8px 42px 8px 16px;
   border-radius: 4px;
@@ -83,6 +88,15 @@
   background-color: transparent;
   color: #8f8f8f;
   font-size: 16px;
+}
+
+.header_input__btn {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .header_input:focus {
@@ -96,6 +110,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: rgb(65, 65, 65);
 }
 
 .header_nav-icon:not(:last-child) {
