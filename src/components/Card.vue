@@ -169,4 +169,16 @@ const onClickFavorite = () => {
   top: 0;
   left: 0;
 }
+
+@media (max-width: 574px) {
+  .card {
+    width: 224px;
+  }
+}
+
+@media (max-width: 478px) {
+  .card {
+    width: 160px;
+  }
+}
 </style>

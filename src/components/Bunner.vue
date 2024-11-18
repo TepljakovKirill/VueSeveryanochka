@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 252px;
+  height: auto;
   background: url(./bg_bunner.jpeg);
 }
 </style>

@@ -3,7 +3,11 @@
     <div class="container">
       <div class="header_wrap flex">
         <RouterLink to="/">
-          <img src="/logo.svg" alt="Логотип" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="/logo-768.svg" />
+            <source media="(min-width: 769px)" srcset="/logo.svg" />
+            <img src="/logo.svg" alt="Логотип" />
+          </picture>
         </RouterLink>
         <a href="#" class="header_button flex">
           <img src="/burger.svg" alt="Бургер" />
@@ -47,6 +51,7 @@
 
 .header_wrap {
   height: 72px;
+  column-gap: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -78,11 +83,12 @@
 }
 
 .header_input-group {
+  width: 375px;
   position: relative;
 }
 
 .header_input {
-  width: 375px;
+  width: 100%;
   height: 40px;
   font-family: inherit;
   position: relative;
@@ -110,6 +116,7 @@
 
 .header_nav {
   list-style: none;
+  padding: 0;
 }
 
 .header_nav li:not(:last-child) {
@@ -123,5 +130,31 @@
   justify-content: space-between;
   align-items: center;
   color: rgb(65, 65, 65);
+}
+
+@media (max-width: 768px) {
+  .header_button p {
+    display: none;
+  }
+
+  .header_button img {
+    margin-left: 0;
+  }
+
+  .header_button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 518px) {
+  .header_nav {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .header_button {
+    display: none;
+  }
 }
 </style>
