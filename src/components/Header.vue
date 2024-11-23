@@ -1,5 +1,21 @@
+<script setup>
+import { ref } from 'vue'
+import HoverCatalog from './HoverCatalog.vue'
+
+const onVisible = ref(false)
+const onHoverCatalog = () => {
+  const location = window.location.pathname
+  if (location === '/catalog') onVisible.value = !onVisible.value
+}
+
+const hideCatalog = () => {
+  onVisible.value = false
+}
+</script>
+
 <template>
   <div class="header">
+    <HoverCatalog v-if="onVisible" @mouseleave="hideCatalog" />
     <div class="container">
       <div class="header_wrap flex">
         <RouterLink to="/">
@@ -9,10 +25,10 @@
             <img src="/logo.svg" alt="Логотип" />
           </picture>
         </RouterLink>
-        <a href="#" class="header_button flex">
+        <RouterLink @mouseenter="onHoverCatalog" to="/catalog" class="header_button flex">
           <img src="/burger.svg" alt="Бургер" />
           <p>Каталог</p>
-        </a>
+        </RouterLink>
 
         <div class="header_input-group">
           <input class="header_input" type="search" placeholder="Найти товар" />

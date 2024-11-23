@@ -6,10 +6,12 @@ import App from './App.vue'
 
 import Home from './pages/Home.vue'
 import Favorites from './pages/Favorites.vue'
+import Catalog from './pages/Catalog.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
-  { path: '/favorites', name: 'Favorites', component: Favorites }
+  { path: '/favorites', name: 'Favorites', component: Favorites },
+  { path: '/catalog', name: 'Catalog', component: Catalog }
 ]
 
 const router = createRouter({
